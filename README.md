@@ -599,7 +599,7 @@ Replace the example paths with the locations of your own images.
 
 Instead of running PyDeface separately for each participant, we provide a Bash script that automatically loops through all participant folders and defaces their T1-weighted images.
 
-**Example script:** [02_pydeface.sh](scripts/02_pydeface.sh)
+**Example script:** [04_pydeface.sh](scripts/04_pydeface.sh)
 
 Before running the script, update the BIDS dataset directory (`bidsdir`) to match your local setup.
 
