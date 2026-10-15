@@ -635,7 +635,7 @@ Once the results have been verified, we need to replace the original T1w images 
 
 We provide a Bash script to automate this process:
 
-**Example script:** [03_replace_T1w.sh](scripts/05_replace_T1w.sh)
+**Example script:** [05_replace_T1w.sh](scripts/05_replace_T1w.sh)
 
 The script will:
 
@@ -653,7 +653,7 @@ backupdir=/path/to/Project/Backup/T1w_with_face
 Then run the script from the repository root:
 
 ```bash
-bash scripts/03_replace_T1w.sh
+bash scripts/05_replace_T1w.sh
 ```
 
 > **Important:** The original T1w images contain potentially identifiable facial information. Keep the `Backup/T1w_with_face/` folder in secure, access-controlled storage, **outside the BIDS dataset and any public GitHub repository**. Make sure the defaced images have been visually inspected before running the replacement script.
@@ -700,7 +700,7 @@ You can request a free FreeSurfer license from the [FreeSurfer website](https://
 
 We provide a Bash script for running fMRIPrep using Docker:
 
-**Example script:** [04_fmriprep_run.sh](scripts/04_fmriprep_run.sh)
+**Example script:** [06_fmriprep_run.sh](scripts/06_fmriprep_run.sh)
 
 Before running the script, review and adjust the file paths, computational resources, and output spaces to match your system and analysis requirements.
 
@@ -760,7 +760,7 @@ Open Terminal and navigate to your project directory containing the `scripts` fo
 Run:
 
 ```bash
-bash scripts/04_fmriprep_run.sh
+bash scripts/06_fmriprep_run.sh
 ```
 
 fMRIPrep will begin preprocessing the selected participant.
@@ -777,7 +777,7 @@ Before processing the entire dataset:
 For **macOS**, you can use `caffeinate` to prevent the computer from sleeping while the script runs:
 
 ```bash
-caffeinate -i bash scripts/04_fmriprep_run.sh
+caffeinate -i bash scripts/06_fmriprep_run.sh
 ```
 
 For **Windows with Docker Desktop**, check **Settings → System → Power & battery → Screen, sleep & hibernate timeouts** and temporarily disable automatic sleep while the computer is plugged in.
@@ -868,10 +868,6 @@ After processing, inspect the generated reports and verify that the denoised BOL
 > **Reproducibility note:** Replace `<tested-version>` with a specific image tag that you have verified, and use the same tag in `scripts/09_fmripost_aroma_run.sh`. Do not run the placeholder command unchanged.
 
 > **Note:** ICA-AROMA is an optional denoising approach. Whether to use it depends on your analysis strategy, and additional nuisance regression or temporal filtering should be planned carefully to avoid redundant processing.
-
-
-
-
 
 
 ## 6. Expected Outputs and Final Checks
