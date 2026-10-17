@@ -714,11 +714,11 @@ For example:
 Project/
 ├── Nifti/                 # BIDS input dataset
 │   ├── sub-01/
-│   └── sub-02/
-├── derivatives/
-│   ├── fmriprep/
-│   ├── mriqc/
-│   └── fmripost_aroma/
+│   ├── sub-02/
+│   └── derivatives/
+│       ├── fmriprep/
+│       ├── mriqc/
+│       └── fmripost_aroma/
 └── work/
 
 ```
@@ -794,13 +794,15 @@ The output structure will look approximately like this:
 ```text
 Project/
 ├── Nifti/
-├── derivatives/
-│   └── fmriprep/
-│       ├── sub-01/
-│       │   ├── anat/
-│       │   └── func/
-│       ├── sub-01.html
-│       └── dataset_description.json
+│   ├── sub-01/
+│   ├── sub-02/
+│   └── derivatives/
+│       └── fmriprep/
+│           ├── sub-01/
+│           │   ├── anat/
+│           │   └── func/
+│           ├── sub-01.html
+│           └── dataset_description.json
 ├── work/
 └── license.txt
 ```
